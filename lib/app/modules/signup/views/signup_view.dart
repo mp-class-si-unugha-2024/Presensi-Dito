@@ -15,7 +15,8 @@ class SignupView extends GetView<SignupController> {
         child: Card(
           child: Form(
             key: formkey,
-            child: Column(
+            child: ListView(
+              padding: EdgeInsets.all(15),
               children: [
                 Text(
                   "REGISTRASI",
@@ -31,15 +32,6 @@ class SignupView extends GetView<SignupController> {
                 ),
                 SizedBox(height: 15),
                 TextFormField(
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "Nama wajib di isi";
-                    }
-                    if (!GetUtils.isEmail(value)) {
-                      return "Masukan Nama dengan benar";
-                    }
-                    return null;
-                  },
                   decoration: InputDecoration(
                     labelText: "Nama",
                     border: OutlineInputBorder(),
@@ -47,15 +39,6 @@ class SignupView extends GetView<SignupController> {
                 ),
                 SizedBox(height: 15),
                 TextFormField(
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "NIM wajib di isi";
-                    }
-                    if (!GetUtils.isEmail(value)) {
-                      return "Masukan NIM dengan benar";
-                    }
-                    return null;
-                  },
                   decoration: InputDecoration(
                     labelText: "NIM",
                     border: OutlineInputBorder(),
@@ -63,15 +46,6 @@ class SignupView extends GetView<SignupController> {
                 ),
                 SizedBox(height: 15),
                 TextFormField(
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "Semester wajib di isi";
-                    }
-                    if (!GetUtils.isEmail(value)) {
-                      return "Masukan Semester dengan benar";
-                    }
-                    return null;
-                  },
                   decoration: InputDecoration(
                     labelText: "Semester",
                     border: OutlineInputBorder(),
@@ -79,15 +53,6 @@ class SignupView extends GetView<SignupController> {
                 ),
                 SizedBox(height: 15),
                 TextFormField(
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "Prodi wajib di isi";
-                    }
-                    if (!GetUtils.isEmail(value)) {
-                      return "Masukan prodi dengan benar";
-                    }
-                    return null;
-                  },
                   decoration: InputDecoration(
                     labelText: "Prodi",
                     border: OutlineInputBorder(),
@@ -95,15 +60,6 @@ class SignupView extends GetView<SignupController> {
                 ),
                 SizedBox(height: 15),
                 TextFormField(
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "Alamat PKL wajib di isi";
-                    }
-                    if (!GetUtils.isEmail(value)) {
-                      return "Masukan Alamat PKL dengan benar";
-                    }
-                    return null;
-                  },
                   decoration: InputDecoration(
                     labelText: "Alamat PKL",
                     border: OutlineInputBorder(),
@@ -111,15 +67,6 @@ class SignupView extends GetView<SignupController> {
                 ),
                 SizedBox(height: 15),
                 TextFormField(
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return "Nomor WhatsApp wajib di isi";
-                    }
-                    if (!GetUtils.isEmail(value)) {
-                      return "Masukan Nomor WhatsApp dengan benar";
-                    }
-                    return null;
-                  },
                   decoration: InputDecoration(
                     labelText: "Nomor WhatsApp",
                     border: OutlineInputBorder(),
