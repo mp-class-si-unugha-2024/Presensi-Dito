@@ -28,7 +28,11 @@ class HomeView extends GetView<HomeController> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("Selamat datang"),
-                        Text("Muhaamad Adito Pratama"),
+                        Text(
+                          "Muhamad Adito Pratama",
+                          style: TextStyle(
+                              fontSize: 19, fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
                   ],
@@ -46,7 +50,11 @@ class HomeView extends GetView<HomeController> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text("Sistem Informasi"),
-                      Text("212231018"),
+                      Text(
+                        "212231018",
+                        style: TextStyle(
+                            fontSize: 19, fontWeight: FontWeight.bold),
+                      ),
                       Text("Universitas Nahdlatul Ulama Al Ghazali Cilacap"),
                       SizedBox(
                         height: 20,
@@ -58,6 +66,7 @@ class HomeView extends GetView<HomeController> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
                             Column(
                               children: [
@@ -66,7 +75,12 @@ class HomeView extends GetView<HomeController> {
                               ],
                             ),
                             SizedBox(
-                              width: 150,
+                              height: 30,
+                              child: VerticalDivider(
+                                width: 20,
+                                thickness: 2,
+                                color: Colors.black,
+                              ),
                             ),
                             Column(
                               children: [
@@ -84,43 +98,109 @@ class HomeView extends GetView<HomeController> {
                   height: 15,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
                       padding: EdgeInsets.all(15),
                       decoration: BoxDecoration(
                         color: Colors.grey,
-                        borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                       child: Row(
                         children: [
                           Column(
                             children: [
                               Text("Jarak dari kantor"),
-                              Text("63.35 m"),
+                              Text(
+                                "63.35 m",
+                                style: TextStyle(
+                                    fontSize: 19, fontWeight: FontWeight.bold),
+                              ),
                             ],
                           ),
                         ],
                       ),
                     ),
-                    SizedBox(width: 50),
                     Container(
                       padding: EdgeInsets.all(15),
                       decoration: BoxDecoration(
                         color: Colors.grey,
-                        borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.circular(15),
                       ),
                       child: Row(
                         children: [
                           Column(
                             children: [
                               Text("Zona presensi"),
-                              Text("Di Luar Area"),
+                              Text(
+                                "Di Luar Area",
+                                style: TextStyle(
+                                    fontSize: 19, fontWeight: FontWeight.bold),
+                              ),
                             ],
                           ),
                         ],
                       ),
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Riwayat presensi",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Lihat semua",
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  padding: EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Text("check in"),
+                          Text(
+                            "12:37 PM",
+                            style: TextStyle(
+                                fontSize: 19, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text("check out"),
+                          Text(
+                            ".. : .. .. ",
+                            style: TextStyle(
+                                fontSize: 19, fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                      Text("Jumat, 9 Juni 2024"),
+                    ],
+                  ),
                 ),
               ],
             ),
